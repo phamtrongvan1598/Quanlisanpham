@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+<body>
+<h3>View Customer</h3>
+<p>
+    <a th:href="@{/}">
+        Back to customer list
+    </a>
+</p>
+<div id="detail">
+    <div class="cusdetail">
+        <label>Name:</label>
+        <label th:text="${customer.getName()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Giaca:</label>
+        <label th:text="${customer.getGiaca()}"></label>
+    </div>
+    <div class="cusdetail">
+        <label>Soluong:</label>
+        <label th:text="${customer.getSoluong()}"></label>
+    </div>
+
+    <label>Category:</label>
+    <label th:text="${customer.getCategory()}">
+
+    </label>
+</div>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>
